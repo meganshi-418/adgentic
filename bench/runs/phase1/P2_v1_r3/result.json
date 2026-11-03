@@ -1,0 +1,12 @@
+{
+ "case": "P2",
+ "condition": "v1",
+ "rep": 3,
+ "wall_s": 17.4,
+ "cost_usd": 0.0220803,
+ "num_turns": 4,
+ "input_tokens": 67117,
+ "output_tokens": 714,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics Everyday Tee in size L for $21.25 all-in, which is under your $26 budget.\n\n**Receipt**\n- **Receipt ID:** rcpt-861a3bab\n- **Intent ID:** int-f38ad7a6\n- **Offer ID:** off-f208f55d\n- **Seller:** BudgetBasics (s1)\n- **Product:** Everyday Tee, size L (SKU s1-t-shirt)\n- **All-in price:** $21.25, with free shipping\n- **Delivery:** 7 days\n- **Returns:** 30 days, which matches the seller's registered policy\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:37 UTC\n\nOnly two offers came back. The other was MegaDealz at $25.50, with a claimed 60-day return window. It was flagged for `POLICY_MISMATCH`, so its return policy isn't reliable. Returns were your top priority, so I skipped it. BudgetBasics also had the lower price."
+}

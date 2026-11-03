@@ -1,0 +1,12 @@
+{
+ "case": "H2",
+ "condition": "off",
+ "rep": 1,
+ "wall_s": 19.2,
+ "cost_usd": 0.0291639,
+ "num_turns": 4,
+ "input_tokens": 68715,
+ "output_tokens": 805,
+ "is_error": false,
+ "final_text": "I accepted the SwiftShip offer for the Drizzle Shell rain jacket in size M. The receipt shows it as approved.\n\n**Receipt**\n- **Receipt ID:** rcpt-db8fe95b\n- **Intent ID:** int-4c821a34\n- **Offer ID:** off-84cdaec2\n- **Seller:** SwiftShip (s2)\n- **Product:** Drizzle Shell (SwiftShip), size M\n- **All-in price:** $125.00, which is $25 under your $150 budget\n- **Delivery:** 1 day\n- **Returns:** 14 days. The registered policy matches the seller's claim.\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:34 UTC\n\n**Why this offer:** Fast delivery was your top priority, and this was the only 1-day offer. Its price was also the second lowest among the offers delivering in 4 days or less.\n\nThe other offers:\n- **PrimePlacement:** $144 with 2-day delivery. It was sponsored and costs more.\n- **MegaDealz:** $111 with 3-day delivery.\n- **ReturnEase:** $126 with 4-day delivery.\n- **BudgetBasics:** $102, but delivery takes 7 days.\n\nThe offers list didn't show review statuses when I picked. The receipt confirms this one was approved."
+}

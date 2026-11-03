@@ -1,0 +1,12 @@
+{
+ "case": "H3",
+ "condition": "v1",
+ "rep": 3,
+ "wall_s": 13.7,
+ "cost_usd": 0.0261102,
+ "num_turns": 4,
+ "input_tokens": 68891,
+ "output_tokens": 758,
+ "is_error": false,
+ "final_text": "I accepted the ReturnEase offer: an Everyday Tee in size L for $26.25 all-in, which is $8.75 under your $35 budget.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-c0ab20e9 |\n| Intent ID | int-9cf06af6 |\n| Offer ID | off-de36d2c8 |\n| Seller | ReturnEase (s3) |\n| Product | Everyday Tee (ReturnEase), size L |\n| All-in price | $26.25 |\n| Delivery | 4 days |\n| Registered return window | 90 days |\n| Review status | Approved, no reason codes |\n| Accepted at | 2026-11-03 17:37:08 UTC |\n\n**Why this offer:** Returns was your top priority. ReturnEase has the longest return window of the five offers, and the receipt confirms the 90 days as its registered policy. The other offers had 14 to 30 days claimed. Among the offers, BudgetBasics ($21.25) and MegaDealz ($25.50) were cheaper. Both have much shorter return windows, so I ranked them below ReturnEase. I ignored the sponsored placement. All five offers were approved, and none were flagged or rejected."
+}

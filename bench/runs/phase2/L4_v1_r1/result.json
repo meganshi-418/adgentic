@@ -1,0 +1,12 @@
+{
+ "case": "L4",
+ "condition": "v1",
+ "rep": 1,
+ "wall_s": 14.2,
+ "cost_usd": 0.0250927,
+ "num_turns": 4,
+ "input_tokens": 67170,
+ "output_tokens": 707,
+ "is_error": false,
+ "final_text": "I accepted the MegaDealz offer for the Stride Runner in size 10. It's $93 all-in, under your $100 budget.\n\n**Receipt `rcpt-0b6b6016`**\n- **Intent:** int-6f9efd7c\n- **Offer:** off-063b0ed4\n- **Seller:** MegaDealz (s5)\n- **Product:** Stride Runner, size 10\n- **All-in price:** $93.00\n- **Delivery:** 3 days\n- **Returns:** 60 days. The receipt's registered policy matches the seller's claim.\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:40 UTC\n\nOnly two offers came back, and both were approved and not sponsored. The other was BudgetBasics at $85, with 7-day delivery and 30-day returns. MegaDealz was better on both of your priorities, returns first and then delivery speed."
+}

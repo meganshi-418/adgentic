@@ -1,0 +1,12 @@
+{
+ "case": "L2",
+ "condition": "v2",
+ "rep": 3,
+ "wall_s": 12.2,
+ "cost_usd": 0.021567,
+ "num_turns": 4,
+ "input_tokens": 67115,
+ "output_tokens": 674,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer, the Drizzle Shell in size M, for $102 all-in. That's $13 under your $115 budget.\n\n**Receipt**\n- Receipt ID: rcpt-888038be\n- Intent ID: int-111ca72b\n- Offer ID: off-04bbbc30\n- Seller: BudgetBasics (s1)\n- Product: Drizzle Shell, size M\n- All-in price: $102.00, with free standard shipping\n- Delivery: 7 days\n- Returns: 30 days, and the registered policy matches the seller's claim\n- Review status: approved, with no flags\n- Accepted: 2026-11-03 17:40 UTC\n\nI only got two offers back. The other was MegaDealz at $111, with 3-day delivery and a claimed 60-day return window. It was flagged `REPUTATION_MISMATCH`, so I skipped it even though its claims looked better on your two priorities. BudgetBasics was the only approved offer."
+}

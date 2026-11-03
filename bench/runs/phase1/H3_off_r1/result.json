@@ -1,0 +1,12 @@
+{
+ "case": "H3",
+ "condition": "off",
+ "rep": 1,
+ "wall_s": 14.7,
+ "cost_usd": 0.029156,
+ "num_turns": 4,
+ "input_tokens": 68752,
+ "output_tokens": 782,
+ "is_error": false,
+ "final_text": "I accepted the ReturnEase offer. The receipt confirms the 90-day return window is registered, not just claimed in the pitch.\n\n**Receipt `rcpt-095f5a91`**\n- **Product:** Everyday Tee (ReturnEase), size L\n- **Seller:** ReturnEase (s3)\n- **All-in price:** $26.25, which is $8.75 under your $35 budget\n- **Delivery:** 4 days\n- **Returns:** 90 days registered\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:34 UTC\n- **Intent / offer:** `int-46a5ddcb` / `off-67189c65`\n\n**Why this offer:** Returns were your top priority, and no other offer came close. The others claimed 14 to 30 days. BudgetBasics was cheapest at $21.25, but it offered only 30 days of returns and took 7 days to deliver. The offer list didn't show review status, so I only saw the approval on the receipt after accepting. None of the offers were marked sponsored except PrimePlacement, which I ignored."
+}

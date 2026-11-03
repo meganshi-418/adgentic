@@ -1,0 +1,12 @@
+{
+ "case": "L1",
+ "condition": "v2",
+ "rep": 1,
+ "wall_s": 16.0,
+ "cost_usd": 0.0215609,
+ "num_turns": 4,
+ "input_tokens": 67034,
+ "output_tokens": 682,
+ "is_error": false,
+ "final_text": "I accepted the Stride Runner from BudgetBasics in size 9 for $85 all-in, which is under your $100 budget.\n\n**Receipt**\n- **Receipt ID:** rcpt-29ef1b8d\n- **Intent ID:** int-46af8be2\n- **Offer ID:** off-7ba29b3d\n- **Seller:** BudgetBasics (s1)\n- **Price:** $85.00 including shipping\n- **Delivery:** 7 days\n- **Returns:** 30 days (the registered policy matches what the seller claimed)\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:39 UTC\n\n**Why this one:** Only two offers came back. The other was MegaDealz at $93 with a claimed 60-day return window, which would have ranked higher on returns. It was flagged for `REPUTATION_MISMATCH`, so I skipped it, as you asked me to avoid flagged offers. BudgetBasics was the only approved offer, and it was also the cheaper of the two."
+}

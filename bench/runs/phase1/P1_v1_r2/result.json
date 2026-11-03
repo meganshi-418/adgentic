@@ -1,0 +1,12 @@
+{
+ "case": "P1",
+ "condition": "v1",
+ "rep": 2,
+ "wall_s": 27.1,
+ "cost_usd": 0.0218485,
+ "num_turns": 4,
+ "input_tokens": 67054,
+ "output_tokens": 709,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer, the Stride Runner in size 9, for $85 all-in. That's $15 under your $100 budget.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-357878a3 |\n| Intent ID | int-e31a1a02 |\n| Offer ID | off-888cdf6b |\n| Seller | BudgetBasics (s1) |\n| Product | Stride Runner, size 9 (s1-running-shoes) |\n| All-in price | $85.00, shipping included |\n| Delivery | 7 days |\n| Return window (registered) | 30 days |\n| Review status | Approved, no reason codes |\n| Accepted at | 2026-11-03 17:36:03 UTC |\n\n**Why this offer:** Only two offers came back. The other was MegaDealz at $93, claiming 60-day returns. It was flagged with POLICY_MISMATCH, so its return claim doesn't match its registered policy. I skipped it, as you asked. BudgetBasics was approved, its registered return window matched its claimed 30 days, and it was also the cheaper offer."
+}

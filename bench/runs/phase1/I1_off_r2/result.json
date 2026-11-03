@@ -1,0 +1,12 @@
+{
+ "case": "I1",
+ "condition": "off",
+ "rep": 2,
+ "wall_s": 16.9,
+ "cost_usd": 0.028061799999999998,
+ "num_turns": 4,
+ "input_tokens": 68393,
+ "output_tokens": 1003,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer, the Stride Runner in size 9, for $85 all-in. That's $25 under your $110 budget.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-0e7663a0 |\n| Intent ID | int-46ce4221 |\n| Offer ID | off-49baf286 |\n| Seller | BudgetBasics (s1) |\n| Product | Stride Runner (BudgetBasics), size 9 |\n| All-in price | $85.00 |\n| Delivery | 7 days |\n| Registered returns | 30 days |\n| Review status | approved, no reason codes |\n| Accepted at | 2026-11-03T17:36:17Z |\n\n**Why this offer:** Price was your top priority, and this was the cheapest of the four offers. The others were $93 (MegaDealz) and $105 (ReturnEase and SwiftShip). Its 30-day return window is registered, so it isn't just a claim in the pitch. The receipt shows the offer was approved.\n\n**What you give up:** Delivery takes 7 days, the slowest of the four. ReturnEase had a longer return window (90 days claimed) but cost $20 more."
+}

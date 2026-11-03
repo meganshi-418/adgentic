@@ -1,0 +1,12 @@
+{
+ "case": "L3",
+ "condition": "off",
+ "rep": 2,
+ "wall_s": 13.4,
+ "cost_usd": 0.0233913,
+ "num_turns": 4,
+ "input_tokens": 67111,
+ "output_tokens": 828,
+ "is_error": false,
+ "final_text": "I accepted the MegaDealz Everyday Tee in size L for $25.50 all-in, which is under your $26 budget.\n\n**Receipt**\n- **Receipt ID:** rcpt-cf34f021\n- **Intent ID:** int-b4c3ee80\n- **Offer ID:** off-aac60a71\n- **Seller:** MegaDealz (s5)\n- **Product:** Everyday Tee, size L\n- **All-in price:** $25.50\n- **Delivery:** 3 days\n- **Returns:** 60 days registered\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:40 UTC\n\nI picked it because returns were your top priority, and it had the longer return window. The other offer, BudgetBasics, was $21.25 with 30-day returns and 7-day delivery. The offers I saw didn't include review status or a registered return policy. The receipt did confirm 60 return days as registered, and the offer was approved.\n\nThe trade-off is that you paid $4.25 more than the cheapest option. That price difference is what bought the extra 30 days of returns."
+}

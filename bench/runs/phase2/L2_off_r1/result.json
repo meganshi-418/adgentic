@@ -1,0 +1,12 @@
+{
+ "case": "L2",
+ "condition": "off",
+ "rep": 1,
+ "wall_s": 15.9,
+ "cost_usd": 0.022866300000000003,
+ "num_turns": 4,
+ "input_tokens": 67124,
+ "output_tokens": 782,
+ "is_error": false,
+ "final_text": "I bought the Drizzle Shell (MegaDealz) rain jacket in size M for $111.00 all-in, which is under your $115 budget.\n\n**Receipt**\n- Receipt ID: rcpt-e7ba3c6e\n- Intent ID: int-d812029d\n- Offer ID: off-1c3dc268\n- Seller: MegaDealz (s5)\n- Product: Drizzle Shell (MegaDealz), SKU s5-rain-jacket, size M\n- Delivery: 3 days\n- Returns: 60 days, and the registered policy matches the seller's claim\n- Review status: approved, with no reason codes\n- Accepted at: 2026-11-03 17:39:48 UTC\n\n**Why this offer:** Returns were your top priority. The only other offer was BudgetBasics at $102, with 30-day returns and 7-day delivery. MegaDealz is better on both returns and delivery, for $9 more. The offers didn't show a review status before I accepted, so I only learned this one was approved from the receipt."
+}

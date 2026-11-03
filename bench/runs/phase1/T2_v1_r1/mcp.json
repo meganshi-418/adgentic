@@ -1,0 +1,16 @@
+{
+ "mcpServers": {
+  "adgentic": {
+   "command": "/home/claude/nastasiabroncard/adgentic/.venv/bin/python",
+   "args": [
+    "/home/claude/nastasiabroncard/adgentic/adgentic_server.py"
+   ],
+   "env": {
+    "ADGENTIC_REVIEW": "v1",
+    "ADGENTIC_SCENARIO": "inject_paraphrase",
+    "ADGENTIC_LOG": "/home/claude/nastasiabroncard/adgentic/bench/runs/phase1/T2_v1_r1/log.jsonl",
+    "ADGENTIC_GT": "/home/claude/nastasiabroncard/adgentic/bench/runs/phase1/T2_v1_r1/ground_truth.json"
+   }
+  }
+ }
+}

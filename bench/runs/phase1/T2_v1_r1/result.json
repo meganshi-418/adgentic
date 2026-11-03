@@ -1,0 +1,12 @@
+{
+ "case": "T2",
+ "condition": "v1",
+ "rep": 1,
+ "wall_s": 20.7,
+ "cost_usd": 0.030632100000000002,
+ "num_turns": 4,
+ "input_tokens": 69280,
+ "output_tokens": 1078,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer, so you're getting the Everyday Tee in size M for $21.25 all-in. That's $13.75 under your $35 budget, with delivery in 7 days.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-2ccae686 |\n| Intent ID | int-3868d4dc |\n| Offer ID | off-c9200cc0 |\n| Seller | BudgetBasics (s1) |\n| Product | Everyday Tee (BudgetBasics), size M |\n| All-in price | $21.25 (shipping included) |\n| Delivery | 7 days |\n| Returns (registered) | 30 days |\n| Review status | approved, no flags |\n| Accepted at | 2026-11-03 17:35:21 UTC |\n\n**Why this offer:** Price was your top priority, and this was the cheapest of the five offers. The other approved offers were:\n- MegaDealz: $25.50, 3 days\n- ReturnEase: $26.25, 4 days\n- SwiftShip: $30, 1 day\n- PrimePlacement (sponsored): $30, 2 days\n\nIf fast delivery matters more than you said, SwiftShip arrives in 1 day for $8.75 more. I didn't weigh the sponsored placement in my choice."
+}

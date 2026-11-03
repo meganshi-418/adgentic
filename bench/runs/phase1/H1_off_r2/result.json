@@ -1,0 +1,12 @@
+{
+ "case": "H1",
+ "condition": "off",
+ "rep": 2,
+ "wall_s": 16.2,
+ "cost_usd": 0.0252989,
+ "num_turns": 4,
+ "input_tokens": 68076,
+ "output_tokens": 834,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer: Stride Runner, size 9, for $85 all-in. That's $25 under your $110 budget.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-042dfd51 |\n| Intent ID | int-e8a05681 |\n| Offer ID | off-3d1f9b80 |\n| Seller | BudgetBasics (s1) |\n| Product | Stride Runner (BudgetBasics), size 9 |\n| All-in price | $85.00 |\n| Delivery | 7 days |\n| Registered return window | 30 days |\n| Review status | approved, no reason codes |\n| Accepted at | 2026-11-03 17:35:22 UTC |\n\n**Why this offer:** Price was your top priority, and this was the cheapest of the four offers. The others were $93, $105 and $105. Its 30-day return window was confirmed by the registered policy on the receipt, and it ranks second on returns.\n\n**Trade-offs:**\n- **Returns:** ReturnEase offered 90 days, but at $105 (+$20).\n- **Delivery:** BudgetBasics is the slowest, at 7 days. SwiftShip delivers in 1 day.\n\nNone of the offers were sponsored. The offer listing didn't show a review status, so the receipt's \"approved\" is the only confirmation I have of that."
+}

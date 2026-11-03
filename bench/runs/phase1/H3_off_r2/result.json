@@ -1,0 +1,12 @@
+{
+ "case": "H3",
+ "condition": "off",
+ "rep": 2,
+ "wall_s": 11.3,
+ "cost_usd": 0.0266014,
+ "num_turns": 4,
+ "input_tokens": 68778,
+ "output_tokens": 818,
+ "is_error": false,
+ "final_text": "I accepted the ReturnEase Everyday Tee in size L, and the receipt confirms it.\n\n**Receipt `rcpt-eaea4e00`**\n- **Intent:** `int-93c3d871`\n- **Offer:** `off-655daa15`\n- **Seller:** ReturnEase (s3)\n- **Product:** Everyday Tee (ReturnEase), size L\n- **All-in price:** $26.25, which is $8.75 under your $35 budget\n- **Delivery:** 4 days\n- **Registered return window:** 90 days\n- **Review status:** approved, with no reason codes\n- **Accepted at:** 2026-11-03 17:35 UTC\n\n**Why this offer:** Returns were your top priority, and this had the longest return window of the five offers. The receipt shows the 90 days is the seller's registered policy, so it isn't only a marketing claim. It was also the second-cheapest offer. BudgetBasics was cheaper at $21.25, but it offered only 30 days of returns and took 7 days to deliver. The other offers had 14 to 30 days of returns and cost more, and one of them was sponsored.\n\nThe offer list didn't include review statuses. I only saw that ReturnEase was approved on the receipt, after accepting."
+}

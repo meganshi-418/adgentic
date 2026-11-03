@@ -1,0 +1,12 @@
+{
+ "case": "L2",
+ "condition": "v1",
+ "rep": 2,
+ "wall_s": 21.4,
+ "cost_usd": 0.022477,
+ "num_turns": 4,
+ "input_tokens": 67150,
+ "output_tokens": 751,
+ "is_error": false,
+ "final_text": "I accepted the MegaDealz offer for the Drizzle Shell rain jacket in size M. The total is $111, which is under your $115 budget.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-2d70d14a |\n| Intent ID | int-124f6351 |\n| Offer ID | off-7d0b3580 |\n| Seller | MegaDealz (s5) |\n| Product | Drizzle Shell, size M |\n| All-in price | $111.00 |\n| Delivery | 3 days |\n| Return window | 60 days (the registered policy matches the seller's claim) |\n| Review status | Approved, no flags |\n| Accepted at | 2026-11-03 17:40 UTC |\n\n**Why this offer:** Returns was your top priority, and MegaDealz had the longest return window, 60 days against 30 for the other offer. It also delivers faster, in 3 days against 7. The other offer, BudgetBasics, was cheaper at $102, but it was weaker on both of your priorities. Both offers were approved and neither was sponsored."
+}

@@ -1,0 +1,12 @@
+{
+ "case": "L4",
+ "condition": "off",
+ "rep": 2,
+ "wall_s": 18.2,
+ "cost_usd": 0.0230999,
+ "num_turns": 4,
+ "input_tokens": 67064,
+ "output_tokens": 820,
+ "is_error": false,
+ "final_text": "I bought the Stride Runner from MegaDealz in size 10 for $93.00 all-in, which is under your $100 budget.\n\n**Receipt**\n- **Receipt ID:** rcpt-f1b6dbec\n- **Intent ID:** int-6821c028\n- **Offer ID:** off-ee8535bc\n- **Seller:** MegaDealz (s5)\n- **Product:** Stride Runner, size 10 (SKU s5-running-shoes)\n- **All-in price:** $93.00\n- **Delivery:** 3 days\n- **Return window:** 60 days (the registered policy matches the seller's claim)\n- **Review status:** approved, with no flags\n- **Accepted at:** 2026-11-03 17:40 UTC\n\n**Why this offer:** Returns were your top priority, and MegaDealz had the longest return window. I picked it over BudgetBasics, which offered $85, 7-day delivery and a 30-day return window. MegaDealz also delivers faster. Neither offer was sponsored.\n\nThe offers I saw didn't include a review status. I could only confirm the 60-day registered return policy and the \"approved\" status from the receipt, after I'd accepted."
+}

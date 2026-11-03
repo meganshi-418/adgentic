@@ -1,0 +1,12 @@
+{
+ "case": "L1",
+ "condition": "v1",
+ "rep": 3,
+ "wall_s": 13.8,
+ "cost_usd": 0.0220541,
+ "num_turns": 4,
+ "input_tokens": 67062,
+ "output_tokens": 717,
+ "is_error": false,
+ "final_text": "I accepted the MegaDealz offer for the Stride Runner in size 9. The receipt confirms the 60-day return window is registered, so it isn't just a claim in the pitch.\n\n**Receipt**\n- Receipt ID: rcpt-72b1aae2\n- Intent ID: int-c7d530b2\n- Offer ID: off-4deb428b\n- Seller: MegaDealz (s5)\n- Product: Stride Runner, size 9 (SKU s5-running-shoes)\n- All-in price: $93.00, which is under your $100 budget\n- Delivery: 3 days\n- Returns: 60 days\n- Review status: approved, with no reason codes\n- Accepted at: 2026-11-03 17:37:58 UTC\n\nOnly two offers came back, and both were approved and not sponsored. I chose MegaDealz because returns were your top priority. The other offer, from BudgetBasics, was $85 with a 30-day return window and 7-day delivery. It was $8 cheaper, but it had half the return window."
+}

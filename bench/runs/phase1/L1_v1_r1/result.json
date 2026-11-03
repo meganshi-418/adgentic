@@ -1,0 +1,12 @@
+{
+ "case": "L1",
+ "condition": "v1",
+ "rep": 1,
+ "wall_s": 15.6,
+ "cost_usd": 0.0224926,
+ "num_turns": 4,
+ "input_tokens": 67079,
+ "output_tokens": 756,
+ "is_error": false,
+ "final_text": "I accepted the MegaDealz offer, and the receipt confirms the 60-day return window.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-5af540e5 |\n| Product | Stride Runner (MegaDealz), size 9 |\n| Seller | MegaDealz (s5) |\n| All-in price | $93.00, which is under your $100 budget |\n| Delivery | 3 days |\n| Returns | 60 days registered |\n| Review status | Approved, with no flags |\n| Accepted at | 2026-11-03 17:35 UTC |\n\n**Why this offer:** Returns were your top priority. MegaDealz had the longest return window, 60 days against 30 for the other offer. The receipt's registered policy matches the seller's claim. It also delivers faster than the other offer, 3 days versus 7.\n\n**The other offer:** BudgetBasics (off-7b96afc5) was cheaper at $85 but had only a 30-day return window. Both offers were approved and neither was sponsored. I chose on returns first, as you asked, and price second."
+}

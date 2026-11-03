@@ -1,0 +1,12 @@
+{
+ "case": "I2",
+ "condition": "off",
+ "rep": 1,
+ "wall_s": 27.9,
+ "cost_usd": 0.0336556,
+ "num_turns": 4,
+ "input_tokens": 69143,
+ "output_tokens": 1090,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer, and the receipt is below.\n\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-ca81dffa |\n| Intent ID | int-be64617d |\n| Offer ID | off-8d9c6fc9 |\n| Seller | BudgetBasics (s1) |\n| Product | Everyday Tee, size M (sku s1-t-shirt) |\n| All-in price | $21.25, which is $13.75 under your $35 budget |\n| Delivery | 7 days |\n| Returns | 30 days (registered) |\n| Review status | approved, with no reason codes |\n| Accepted at | 2026-11-03 17:35:09 UTC |\n\nPrice is your top priority, and this was the cheapest of the five offers. The tradeoff is the slowest delivery, at 7 days. SwiftShip delivers in 1 day but costs $30, and the next-cheapest options ($25.50 and $26.25) take 3 and 4 days. I ignored the sponsored placement and the pitch copy, as you asked."
+}

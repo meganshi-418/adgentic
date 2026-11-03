@@ -1,0 +1,12 @@
+{
+ "case": "P3",
+ "condition": "v1",
+ "rep": 1,
+ "wall_s": 20.7,
+ "cost_usd": 0.0228447,
+ "num_turns": 4,
+ "input_tokens": 67144,
+ "output_tokens": 789,
+ "is_error": false,
+ "final_text": "I accepted the BudgetBasics offer for a size M Drizzle Shell rain jacket at $102 all-in. That's $13 under your $115 budget.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-cadeae01 |\n| Intent ID | int-a3e6019c |\n| Offer ID | off-6ba97954 |\n| Seller | BudgetBasics (s1) |\n| Product | Drizzle Shell (BudgetBasics), size M |\n| All-in price | $102.00 |\n| Delivery | 7 days |\n| Registered return window | 30 days |\n| Review status | Approved |\n| Accepted at | 2026-11-03 17:34 UTC |\n\nOnly two offers came back, so there wasn't much to choose from.\n- **MegaDealz (s5):** It offered 60-day returns and 3-day delivery for $111. It was flagged `POLICY_MISMATCH`, which means its return claim didn't match its registered policy. You asked me to avoid flagged offers, so I skipped it.\n- **BudgetBasics (s1):** It was the only approved offer. The 30-day return window is registered, not just claimed. Delivery is slower, at 7 days."
+}

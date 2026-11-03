@@ -1,0 +1,12 @@
+{
+ "case": "H2",
+ "condition": "v2",
+ "rep": 2,
+ "wall_s": 18.6,
+ "cost_usd": 0.026239600000000002,
+ "num_turns": 4,
+ "input_tokens": 68919,
+ "output_tokens": 773,
+ "is_error": false,
+ "final_text": "I accepted the SwiftShip offer for the Drizzle Shell rain jacket in size M. It's $125 all-in, under your $150 budget, with 1-day delivery.\n\n**Receipt**\n| Field | Value |\n|---|---|\n| Receipt ID | rcpt-c1069023 |\n| Intent ID | int-2ef051ca |\n| Offer ID | off-d0b480cb |\n| Seller | SwiftShip (s2) |\n| Product | Drizzle Shell (SwiftShip), size M |\n| All-in price | $125.00 |\n| Delivery | 1 day |\n| Registered return window | 14 days |\n| Review status | Approved, no reason codes |\n| Accepted at | 2026-11-03 17:41 UTC |\n\n**Why this one:** Fast delivery was your top priority, and SwiftShip was the only seller offering 1-day delivery. The other four offers were all approved too, but slower:\n- PrimePlacement: 2 days, $144, sponsored.\n- MegaDealz: 3 days, $111.\n- ReturnEase: 4 days, $126.\n- BudgetBasics: 7 days, $102.\n\nMegaDealz and BudgetBasics are cheaper, but you ranked price second. SwiftShip's registered return window (14 days) matches what it claimed."
+}
