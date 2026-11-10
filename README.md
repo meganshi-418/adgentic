@@ -31,3 +31,15 @@ Files written next to `adgentic_server.py`:
 - `.seller_keys.json`: seller private keys, kept so older log entries still verify (gitignored)
 
 Delete `log.jsonl` to start a fresh evaluation.
+
+## Plugins and external sellers (HW8)
+
+`ADGENTIC_PLUGINS` takes a list of Python files (separated by `:`). Each defines
+`setup(exchange)` and can call `exchange.register_category(...)` and
+`exchange.register_external_seller(...)`. An external seller builds and signs its own
+offers; the exchange checks the signature against the registered public key and runs
+Offer Review on them like any other offer. `post_intent` also accepts an optional
+`quantity` (default 1). With no plugins set, the server behaves as before.
+
+The NANDA Town integration (a Town mailbox seller as an Adgentic seller) uses this hook;
+its connector and tests live in the Town repository under `integrations/adgentic/`.

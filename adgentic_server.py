@@ -4,8 +4,10 @@ signed offers, and records everything to log.jsonl.
 Run over stdio:  python adgentic_server.py
 """
 
+import importlib.util
 import json
 import os
+import sys
 import random
 import re
 import uuid
@@ -117,8 +119,12 @@ SELLERS["s5"] = {**SELLERS["s5"], **S5_SCENARIOS[SCENARIO]}
 
 def seller_catalog(seller_id: str) -> list[dict]:
     s = SELLERS[seller_id]
+    if s.get("external"):
+        return s["catalog"]  # declared by the external seller at registration
     items = []
     for category, c in CATEGORIES.items():
+        if c.get("external_only"):
+            continue
         items.append({
             "sku": f"{seller_id}-{category.replace(' ', '-')}",
             "category": category,
@@ -211,17 +217,21 @@ def signature_ok(offer: dict) -> bool:
 def seller_make_offer(seller_id: str, intent: dict) -> dict | None:
     """Rule-based seller: offer the matching item if it fits the budget."""
     s = SELLERS[seller_id]
+    if s.get("external"):
+        # External seller (registered by a plugin): it builds and signs its own offer
+        return s["make_offer"](intent)
     item = next((i for i in seller_catalog(seller_id) if i["category"] == intent["category"]), None)
     if item is None:
         return None
-    all_in = round(item["price"] + item["shipping"], 2)
+    all_in = round(item["price"] * intent.get("quantity", 1) + item["shipping"], 2)
     if all_in > intent["max_total_price"]:
         return None
     offer = {
         "offer_id": f"off-{uuid.uuid4().hex[:8]}",
         "intent_id": intent["intent_id"],
         "seller_id": seller_id,
-        "product": {"sku": item["sku"], "name": item["name"], "size": intent["size"]},
+        "product": {"sku": item["sku"], "name": item["name"], "size": intent["size"],
+                    "quantity": intent.get("quantity", 1)},
         "all_in_price": all_in,
         "delivery_days": s["delivery_days"],
         "return_days_claimed": s["claimed_return_days"],
@@ -300,13 +310,15 @@ def normalize_category(category: str) -> str:
 
 
 @mcp.tool()
-def post_intent(category: str, size: str, max_total_price: float, priorities: list[str]) -> str:
-    """Post a shopping intent. Routes it to 5 seller agents and returns the intent_id.
+def post_intent(category: str, size: str, max_total_price: float, priorities: list[str],
+                quantity: int = 1) -> str:
+    """Post a shopping intent. Routes it to the registered seller agents and returns the intent_id.
 
-    category: one of "running shoes", "rain jacket", "t-shirt".
+    category: one of "running shoes", "rain jacket", "t-shirt" (plugins may register more).
     size: e.g. "9" for shoes or "M" for apparel.
-    max_total_price: budget for the all-in price (item + shipping).
+    max_total_price: budget for the all-in price (items + shipping).
     priorities: ordered most to least important, e.g. ["price", "returns", "fast_delivery"].
+    quantity: number of units (default 1).
     """
     intent = {
         "intent_id": f"int-{uuid.uuid4().hex[:8]}",
@@ -314,6 +326,7 @@ def post_intent(category: str, size: str, max_total_price: float, priorities: li
         "size": str(size).strip().upper(),
         "max_total_price": float(max_total_price),
         "priorities": [str(p) for p in priorities],
+        "quantity": int(quantity),
     }
     log("intent_received", intent=intent)
     log("intent_routed", intent_id=intent["intent_id"], seller_ids=list(SELLERS))
@@ -397,6 +410,44 @@ def accept_offer(intent_id: str, offer_id: str) -> dict:
     log("offer_accepted", intent_id=intent_id, offer_id=offer_id, receipt=receipt)
     return receipt
 
+
+# ---------------------------------------------------------------- plugins (HW8)
+# ADGENTIC_PLUGINS is an os.pathsep-separated list of Python files. Each defines
+# setup(exchange) and may call register_category / register_external_seller. An
+# external seller builds and signs its own offers; the exchange verifies the
+# signature against the public key registered here and reviews them like any other.
+
+def register_category(name: str, *, sizes: list[str], model: str, aliases: tuple = (),
+                      base_price: float | None = None) -> None:
+    """base_price=None: only external sellers carry it; otherwise Adgentic's own
+    sellers also list it at base_price x their price multiplier."""
+    CATEGORIES[name] = {"base_price": base_price, "sizes": list(sizes), "model": model,
+                        "external_only": base_price is None}
+    for a in aliases:
+        CATEGORY_ALIASES[a] = name
+
+
+def register_external_seller(seller_id: str, *, name: str, public_key_hex: str,
+                             registered_return_days: int, delivery_days: int,
+                             sponsored: bool, catalog: list[dict], make_offer) -> None:
+    if seller_id in SELLERS:
+        raise ValueError(f"seller id {seller_id!r} already registered")
+    SELLERS[seller_id] = {"name": name, "external": True, "make_offer": make_offer,
+                          "catalog": catalog, "registered_return_days": registered_return_days,
+                          "claimed_return_days": registered_return_days,
+                          "delivery_days": delivery_days, "sponsored": sponsored}
+    VERIFY_KEYS[seller_id] = VerifyKey(public_key_hex.encode(), encoder=HexEncoder)
+    DELIVERY_REPORTS[seller_id] = []
+    log("seller_registered", seller_id=seller_id, name=name, external=True,
+        public_key=public_key_hex, registered_return_days=registered_return_days,
+        delivery_days=delivery_days)
+
+
+for _plugin_path in filter(None, os.environ.get("ADGENTIC_PLUGINS", "").split(os.pathsep)):
+    _spec = importlib.util.spec_from_file_location(Path(_plugin_path).stem, _plugin_path)
+    _module = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(_module)
+    _module.setup(sys.modules[__name__])
 
 write_ground_truth()
 
