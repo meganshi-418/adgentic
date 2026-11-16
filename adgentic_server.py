@@ -375,6 +375,68 @@ def get_offers(intent_id: str) -> list[dict]:
 
 
 @mcp.tool()
+def explain_intent(intent_id: str) -> dict:
+    """Explain why each seller did or did not make a usable offer for an intent.
+
+    Use it when get_offers returns nothing, or nothing in stock and approved. For each
+    seller: "offered", "over_budget", "size_not_carried", "out_of_stock" or
+    "category_not_carried", with the all-in price this request would cost there. Also
+    returns the sizes this category comes in and, for every size, the cheapest in-stock
+    all-in price ignoring your budget, so you can tell your owner what would work.
+    Read-only: it posts nothing and changes no offers.
+    """
+    state = INTENTS.get(intent_id)
+    if state is None:
+        raise ValueError(f"Unknown intent_id {intent_id!r}")
+    intent = state["intent"]
+    qty = intent.get("quantity", 1)
+    offered = {o["seller_id"]: o for o in state["offers"].values()}
+    cat = CATEGORIES[intent["category"]]
+    sellers, by_size = [], {}
+    for sid, s in SELLERS.items():
+        item = next((i for i in seller_catalog(sid) if i["category"] == intent["category"]), None)
+        row = {"seller_id": sid, "name": s["name"],
+               "registered_return_days": s["registered_return_days"],
+               "claim_differs_from_registered_policy":
+                   s["claimed_return_days"] != s["registered_return_days"]}
+        if item is None:
+            row["status"] = "category_not_carried"
+        else:
+            all_in = round(item["price"] * qty + item["shipping"], 2)
+            row["all_in_price"] = all_in
+            row["has_requested_size_in_stock"] = intent["size"] in item["sizes_in_stock"]
+            for z in item["sizes_in_stock"]:
+                best = by_size.get(z)
+                if best is None or all_in < best["all_in_price"]:
+                    by_size[z] = {"all_in_price": all_in, "seller_id": sid}
+            if intent["size"] not in cat["sizes"]:
+                row["status"] = "size_not_carried"
+            elif sid in offered:
+                row["status"] = "offered" if offered[sid]["in_stock"] else "out_of_stock"
+            elif all_in > intent["max_total_price"]:
+                row["status"] = "over_budget"
+            elif intent["size"] not in item["sizes_in_stock"]:
+                row["status"] = "out_of_stock"
+            else:
+                row["status"] = "no_offer"
+        sellers.append(row)
+    in_stock_here = [r for r in sellers if r.get("has_requested_size_in_stock")]
+    summary = {
+        "requested": {k: intent[k] for k in ("category", "size", "max_total_price", "quantity")},
+        "sizes_this_category_comes_in": cat["sizes"],
+        "requested_size_exists": intent["size"] in cat["sizes"],
+        "usable_offers": sum(1 for o in state["offers"].values() if o["in_stock"]),
+        "cheapest_in_stock_for_requested_size_ignoring_budget":
+            min((r["all_in_price"] for r in in_stock_here), default=None),
+        "cheapest_in_stock_by_size_ignoring_budget": dict(sorted(by_size.items(), key=lambda kv: cat["sizes"].index(kv[0]) if kv[0] in cat["sizes"] else 99)),
+        "note": "Prices are what this request (same quantity) would cost all-in. Sellers whose "
+                "claim differs from their registered policy are flagged when they make an offer.",
+    }
+    log("intent_explained", intent_id=intent_id, summary=summary)
+    return {"summary": summary, "sellers": sellers}
+
+
+@mcp.tool()
 def accept_offer(intent_id: str, offer_id: str) -> dict:
     """Accept one offer for an intent and return a receipt. Rejected or expired offers cannot be accepted."""
     state = INTENTS.get(intent_id)

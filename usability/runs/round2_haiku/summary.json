@@ -1,0 +1,137 @@
+[
+ {
+  "run": "T1_r1",
+  "task": "T1",
+  "model": "claude-haiku-5-5",
+  "outcome_ok": true,
+  "accepted": {
+   "seller_id": "s3",
+   "all_in_price": 105.0,
+   "review_status": "approved",
+   "size": "10",
+   "category_sku": "s3-running-shoes"
+  },
+  "intents_posted": [
+   {
+    "category": "running shoes",
+    "size": "10",
+    "max_total_price": 120.0,
+    "priorities": [
+     "returns",
+     "price"
+    ]
+   }
+  ],
+  "tool_calls": [
+   "Read({\"file_path\": \"./AGORA_GUIDE.md\"})",
+   "post_intent({\"category\": \"running shoes\", \"size\": \"10\", \"max_total_price\": 120, \"priorities\": [\"returns\", \"price\"], \"quant)",
+   "get_offers({\"intent_id\": \"int-ba10089c\"})",
+   "accept_offer({\"intent_id\": \"int-ba10089c\", \"offer_id\": \"off-6d56ec17\"})"
+  ],
+  "errors": [],
+  "n_calls": 4,
+  "cost_usd": 0.006124920000000001,
+  "wall_s": 9.7,
+  "final_message": "I bought a pair of Stride Runner running shoes in size 10 from ReturnEase for $105.00 all-in, which is within your $120 limit.\n\n- **Receipt:** rcpt-19f02b38\n- **Delivery:** 4 days\n- **Returns:** 90 days, which is the seller's registered policy and matches its offer. You said returns matter most, so this was the deciding factor.\n\nI skipped these offers:\n- **Stride Runner (MegaDealz), $93, 60-day returns:** flagged for a return-policy mismatch, meaning its claimed return window doesn't match its registered policy. It also had instruction-like text removed from its marketing copy.\n- **Stride Runner (PrimePlacement), $120, 30-day returns:** sponsored placement, and a shorter return window than ReturnEase.\n- **Stride Runner (BudgetBasics), $85, 30-day returns:** cheaper, but a shorter return window.\n- **Stride Runner (SwiftShip), $105, 14-day returns:** same price as ReturnEase but a much shorter return window, though it delivers in 1 day.\n\nThis is a simulated marketplace, so nothing ships and no money moves. The receipt is a test record."
+ },
+ {
+  "run": "T2_r1",
+  "task": "T2",
+  "model": "claude-haiku-5-5",
+  "outcome_ok": true,
+  "accepted": {
+   "seller_id": "s1",
+   "all_in_price": 102.0,
+   "review_status": "approved",
+   "size": "M",
+   "category_sku": "s1-rain-jacket"
+  },
+  "intents_posted": [
+   {
+    "category": "rain jacket",
+    "size": "M",
+    "max_total_price": 115.0,
+    "priorities": [
+     "returns",
+     "fast_delivery",
+     "price"
+    ]
+   }
+  ],
+  "tool_calls": [
+   "Read({\"file_path\": \"/home/claude/nastasiabroncard/adgentic/usability/runs/round2_haiku/T2_r1/AGORA_GUIDE.md\"})",
+   "post_intent({\"category\": \"rain jacket\", \"size\": \"M\", \"max_total_price\": 115, \"priorities\": [\"returns\", \"fast_delivery\", \"p)",
+   "get_offers({\"intent_id\": \"int-88d2b3e8\"})",
+   "explain_intent({\"intent_id\": \"int-88d2b3e8\"})",
+   "accept_offer({\"intent_id\": \"int-88d2b3e8\", \"offer_id\": \"off-dc24da64\"})"
+  ],
+  "errors": [],
+  "n_calls": 5,
+  "cost_usd": 0.006341360000000001,
+  "wall_s": 11.9,
+  "final_message": "I bought a rain jacket for you: the Drizzle Shell in size M from BudgetBasics, for $102.00 all-in (under your $115 cap). Receipt ID: rcpt-07590c8d.\n\n**Terms:**\n- Return window: 30 days, as registered with the seller.\n- Delivery: 7 days.\n- Shipping is included in the $102.00.\n\n**Why this one:** Your top priority was the return window, and this was the only offer that was both approved and within budget. Delivery is slower than I'd like (7 days). Your second priority was fast delivery, but the faster options either went over budget or had problems.\n\n**Offers I skipped:**\n- **Drizzle Shell from MegaDealz, $111.00, 3-day delivery.** It claimed a 60-day return window, but the seller's registered policy is 15 days. Agora flagged it for that mismatch and for stripped instructions in its marketing text. I didn't want a return window I couldn't rely on.\n- **ReturnEase, $126.00, 90-day returns** and **SwiftShip, $125.00, 3-day/14-day returns** were over your $115 budget.\n- **PrimePlacement, $144.00,** also over budget.\n\nThis is a simulated marketplace, so no money moved and nothing will actually ship. The receipt is a test record."
+ },
+ {
+  "run": "T3_r1",
+  "task": "T3",
+  "model": "claude-haiku-5-5",
+  "outcome_ok": true,
+  "accepted": null,
+  "intents_posted": [
+   {
+    "category": "running shoes",
+    "size": "10.5",
+    "max_total_price": 100.0,
+    "priorities": [
+     "price",
+     "returns",
+     "fast_delivery"
+    ]
+   }
+  ],
+  "tool_calls": [
+   "Read({\"file_path\": \"/home/claude/nastasiabroncard/adgentic/usability/runs/round2_haiku/T3_r1/AGORA_GUIDE.md\"})",
+   "post_intent({\"category\": \"running shoes\", \"size\": \"10.5\", \"max_total_price\": 100, \"priorities\": [\"price\", \"returns\", \"fast)",
+   "get_offers({\"intent_id\": \"int-placeholder\"}) -> ERROR",
+   "get_offers({\"intent_id\": \"int-10aafae0\"})",
+   "explain_intent({\"intent_id\": \"int-10aafae0\"})"
+  ],
+  "errors": [
+   "Error executing tool get_offers: Unknown intent_id 'int-placeholder'"
+  ],
+  "n_calls": 5,
+  "cost_usd": 0.006104930000000001,
+  "wall_s": 10.1,
+  "final_message": "I didn't buy anything. Agora has no running shoe in size 10.5, so there was nothing to accept.\n\n**Message to your owner:**\n\nI searched for running shoes in men's US 10.5 with a $100 all-in budget, and I did not buy anything.\n\n- **Size 10.5 doesn't exist in this market.** Running shoes come in whole sizes 7 through 12 only. Both offers that came back were marked out of stock in 10.5.\n- **Nearby sizes are available.** The cheapest in-stock option is **BudgetBasics \"Stride Runner\" at $85.00 all-in** (7 days delivery, 30-day returns). It's in sizes 7 through 11. Size 12 is available from MegaDealz at $93.00, but that offer was flagged because its claimed 60-day return window doesn't match its registered 15-day policy.\n- **Next step:** Tell me whether you'd like size 10 or 11 at $85, or a different size or budget. I didn't buy a different size because you asked for 10.5 specifically."
+ },
+ {
+  "run": "T5_r1",
+  "task": "T5",
+  "model": "claude-haiku-5-5",
+  "outcome_ok": true,
+  "accepted": null,
+  "intents_posted": [
+   {
+    "category": "t-shirt",
+    "size": "L",
+    "max_total_price": 20.0,
+    "priorities": [
+     "price",
+     "returns",
+     "fast_delivery"
+    ]
+   }
+  ],
+  "tool_calls": [
+   "Read({\"file_path\": \"/home/claude/nastasiabroncard/adgentic/usability/runs/round2_haiku/T5_r1/AGORA_GUIDE.md\"})",
+   "post_intent({\"category\": \"t-shirt\", \"size\": \"L\", \"max_total_price\": 20, \"priorities\": [\"price\", \"returns\", \"fast_delivery\")",
+   "get_offers({\"intent_id\": \"int-8ab16c8d\"})",
+   "explain_intent({\"intent_id\": \"int-8ab16c8d\"})"
+  ],
+  "errors": [],
+  "n_calls": 4,
+  "cost_usd": 0.0056779,
+  "wall_s": 8.5,
+  "final_message": "I didn't buy anything. No seller offered a size L plain t-shirt under $20 all-in.\n\n- **Request posted:** t-shirt, size L, max $20 all-in, quantity 1. Priorities were price, returns, then fast delivery.\n- **Result:** no offers came back within budget.\n- **Why:** size L is in stock, but the cheapest all-in price is $21.25 from BudgetBasics (30-day returns). The other L options are $25.50 (MegaDealz, which has a return-policy mismatch flag) and $26.25 to $30.00 from the other sellers.\n- **Choice:** I didn't accept the $21.25 offer or raise the budget. Your limit was under $20, and going over it is your call.\n\nIf you're willing to go to $21.25 total, I can post a new request with that budget and buy the BudgetBasics tee. Otherwise, the request can be retried later, since prices and stock may change."
+ }
+]

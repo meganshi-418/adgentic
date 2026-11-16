@@ -3,3 +3,4 @@ __pycache__/
 .seller_keys.json
 log.jsonl
 !bench/runs/**/log.jsonl
+.pytest_cache/

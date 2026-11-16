@@ -1,0 +1,7 @@
+{"ts": "2026-11-16T20:17:27.368661+00:00", "event": "intent_received", "intent": {"intent_id": "int-02cd9c8a", "category": "t-shirt", "size": "L", "max_total_price": 20.0, "priorities": ["price"], "quantity": 1}}
+{"ts": "2026-11-16T20:17:27.368867+00:00", "event": "intent_routed", "intent_id": "int-02cd9c8a", "seller_ids": ["s1", "s2", "s3", "s4", "s5"]}
+{"ts": "2026-11-16T20:17:27.368940+00:00", "event": "seller_declined", "intent_id": "int-02cd9c8a", "seller_id": "s1"}
+{"ts": "2026-11-16T20:17:27.368999+00:00", "event": "seller_declined", "intent_id": "int-02cd9c8a", "seller_id": "s2"}
+{"ts": "2026-11-16T20:17:27.369044+00:00", "event": "seller_declined", "intent_id": "int-02cd9c8a", "seller_id": "s3"}
+{"ts": "2026-11-16T20:17:27.369086+00:00", "event": "seller_declined", "intent_id": "int-02cd9c8a", "seller_id": "s4"}
+{"ts": "2026-11-16T20:17:27.369131+00:00", "event": "seller_declined", "intent_id": "int-02cd9c8a", "seller_id": "s5"}

@@ -1,0 +1,14 @@
+{
+ "mcpServers": {
+  "agora": {
+   "command": "/home/claude/nastasiabroncard/adgentic/.venv/bin/python",
+   "args": [
+    "/home/claude/nastasiabroncard/adgentic/adgentic_server.py"
+   ],
+   "env": {
+    "ADGENTIC_LOG": "/home/claude/nastasiabroncard/adgentic/usability/runs/round2_haiku/T2_r1/agora_log.jsonl",
+    "ADGENTIC_GT": "/home/claude/nastasiabroncard/adgentic/usability/runs/round2_haiku/T2_r1/agora_ground_truth.json"
+   }
+  }
+ }
+}

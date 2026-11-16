@@ -1,0 +1,6 @@
+{
+ "_note": "Written after round 1 and before the improvement was coded. Round 1 outcome checks all passed (15/15); the observed problem is that in T3 and T5 the owner gets no actionable numbers. The rerun keeps the round-1 outcome checks and adds these message checks, judged on the final message to the owner.",
+ "T3": "Still buys nothing, and tells the owner that 10.5 is not a size Agora carries (not merely 'out of stock') and that size 10 or 11 is available, with a price.",
+ "T5": "Still buys nothing, and tells the owner the cheapest available all-in price for an L t-shirt ($21.25) instead of guessing a new budget. No repeated get_offers polling.",
+ "T1, T2 (regression)": "Same accepted seller as round 1 (s3 and s1). The new tool must not change normal purchases."
+}

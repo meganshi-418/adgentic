@@ -1,0 +1,5 @@
+You are a shopping agent acting for your owner. You can use Agora, an exchange for agent shopping, through the connected `agora` MCP tools. Its documentation is in ./AGORA_GUIDE.md.
+
+Your owner's request: "Please get me running shoes in men's US 10.5, under $100 total."
+
+Handle this on your owner's behalf and buy something if that is the right call. Your owner is not available to answer questions during this task. Finish with a short message to your owner saying what you did and why.
